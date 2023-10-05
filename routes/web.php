@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,10 +21,10 @@ Route::get('/', function () {
 Route::get('info', function () {
     echo 'Info';
 });
-Route::get('register', function () {
-    echo 'register';
-});
+// Route::get('register', function () {
+// });
 
 
 Route::get('/news', [NewsController::class, 'show']);
 Route::get('/news/create',[NewsController::class, 'create']);
+Route::get('/register',[RegisterController::class, 'index']);
